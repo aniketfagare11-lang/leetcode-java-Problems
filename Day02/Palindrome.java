@@ -4,28 +4,22 @@ public class Palindrome {
     
     static boolean  ispalindrome(int x)
     {
-        int n=x;
-        int reminder, reversed = 0;
+        
         if(x<0)
         {
             return false;
         }
+        int n=x;
+        int reversed=0;
         
         while (x!=0)
         {
-            reminder=x%10;
+            int reminder=x%10;
             reversed=reversed*10+reminder;
             x /=10;
         }
         
-        if (reversed ==n)
-        {
-            return true;
-        }
-            
-       return false;     
-        
-        
+       return reversed == n;
     }
 
     public static void main(String[] args) {
